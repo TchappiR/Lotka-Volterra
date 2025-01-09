@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
 time = [0]
 lapin = [1]
@@ -15,6 +16,13 @@ for _ in range(100_000):
     time.append(nex_value_time)
     lapin.append(new_value_lapin)
     renard.append(new_value_renard)
+    
+lapin = np.array(lapin)
+lapin *= 1_000
+
+renard = np.array(renard)
+renard *= 1_000
+
     
 plt.figure(figsize=(15, 6))
 plt.plot(time, lapin, "b-", label="Lapins")
