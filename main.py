@@ -1,6 +1,8 @@
+import matplotlib.pyplot as plt
+
 time = [0]
-lapin = [1_000]
-renard = [2_000]
+lapin = [1]
+renard = [2]
 
 alpha, beta, delta, gama = 1/3, 1/3, 1/3, 1/3
 step = 0.001
@@ -14,3 +16,7 @@ for _ in range(10):
     lapin.append(new_value_lapin)
     renard.append(new_value_renard)
     
+plt.figure(figsize=(15, 6))
+plt.plot(time, lapin, "b-")
+plt.plot(time, renard, "r-")
+plt.show()
