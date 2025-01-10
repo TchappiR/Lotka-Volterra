@@ -37,8 +37,14 @@ real_renard_value = np.array(df["renard"])
 mse_lapin = mean_squared_error(real_lapin_value, lapin[:1_000])
 mse_renard = mean_squared_error(real_renard_value, renard[:1_000])
 
-print(f"MSE lapin = {mse_lapin}")
-print(f"MSE renard = {mse_renard}")
+rmse_lapin = np.sqrt(mse_lapin)
+rmse_renard = np.sqrt(mse_renard)
+
+"""print(f"MSE lapin = {mse_lapin}")
+print(f"MSE renard = {mse_renard}")"""
+
+print(f"RMSE lapin = {rmse_lapin}")
+print(f"RMSE renard = {rmse_renard}")
 
 
 # Graphique
